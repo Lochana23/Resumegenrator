@@ -6,10 +6,10 @@ from reportlab.lib.pagesizes import A4
 from google.generativeai import configure, GenerativeModel
 
 # --- CONFIGURE GEMINI API ---
-configure(api_key="YOUR_GEMINI_API_KEY")  # Replace with your actual API key
-
-# --- Initialize Gemini Model ---
-model = GenerativeModel("gemini-pro")
+GEMINI_API_KEY = "AIzaSyBUjbvHg9nj8l3Fzeb6pL2wcaEv5eRObwY"
+MODEL_NAME = "gemini-2.0-flash"
+configure(api_key=GEMINI_API_KEY)
+model = GenerativeModel(MODEL_NAME)
 
 # --- Function to generate resume using Gemini ---
 def generate_resume(name, contact, skills, education, experience, certifications, additional_info, job_role):
